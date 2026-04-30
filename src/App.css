@@ -1,6 +1,8 @@
+@import "tailwindcss";
 img{
   border: 1px solid black;
-  border-radius: 50px;
+  border-radius: 100px;
+  width: 700px;
 }
 p{
   color:black;

@@ -1,29 +1,24 @@
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
+import { useTranslation } from "react-i18next";
 
 export function About() {
+    const { t } = useTranslation();
+
     return (
-        <div>
+        <section style={{ padding: "20px" }}>
+            <h2>{t("about_title")}</h2>
 
-         
-            <Header />
-            <section style={{ padding: "20px" }}>
-                <h2 style={{color:'white'}}>Men haqimda</h2>
-                <p>
-                    Men dasturlashni o‘rganayotgan oddiy talabalardan biriman.
-                    React va C++ bilan ishlashni yaxshi ko‘raman.
-                </p>
-               <p>Robototexnika menga qiziq juda ham.</p>
-               <img src="https://www.texnoman.uz/uploads/blogs/fc0e3a5697b330a6cb374718e77a83eb.jpg" alt="" />
-                <h3>Maqsadlarim</h3>
-                <ul class='container'>
-                    <li>Kuchli dasturchi bo‘lish</li>
-                    <li>Yaxshi loyihalar qilish</li>
-                    <li>IT sohada ishlash</li>
-                </ul>
-            </section>
-            <Footer />
+            <p>{t("about_text1")}</p>
+            <p>{t("about_text2")}</p>
 
-        </div>
+            <img src="https://www.texnoman.uz/uploads/blogs/fc0e3a5697b330a6cb374718e77a83eb.jpg" alt="" />
+
+            <h3>{t("matn")}</h3>
+
+            <ul className='container'>
+                <li>{t("matn1")}</li>
+                <li>{t("matn2")}</li>
+                <li>{t("matn3")}</li>
+            </ul>
+        </section>
     );
 }
